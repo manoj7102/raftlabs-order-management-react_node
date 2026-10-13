@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: raftlabs-order-management-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build -w backend
+    startCommand: npm run start -w backend
+    healthCheckPath: /api/menu
